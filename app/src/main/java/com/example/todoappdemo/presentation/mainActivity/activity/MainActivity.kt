@@ -1,12 +1,15 @@
-package com.example.todoappdemo.presentation.activity
+package com.example.todoappdemo.presentation.mainActivity.activity
 
 
+import android.content.Intent
 import androidx.activity.viewModels
 import com.example.todoappdemo.R
 import com.example.todoappdemo.common.base.activity.AppBaseActivity
 import com.example.todoappdemo.databinding.ActivityMainBinding
-import com.example.todoappdemo.presentation.viewModel.MainActivityViewModel
+import com.example.todoappdemo.presentation.addTaskActivity.activity.AddTaskActivity
+import com.example.todoappdemo.presentation.mainActivity.viewModel.MainActivityViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
 
 @AndroidEntryPoint
 class MainActivity : AppBaseActivity<ActivityMainBinding>() {
@@ -16,6 +19,11 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>() {
     }
 
     override fun setEvents() {
+        add_task_btn.setOnClickListener {
+            //startAnotherActivity(this,AddTaskActivity)
+            val intent = Intent(this, AddTaskActivity::class.java)
+            startAnotherActivity(intent)
+        }
     }
 
     override fun setObservers() {

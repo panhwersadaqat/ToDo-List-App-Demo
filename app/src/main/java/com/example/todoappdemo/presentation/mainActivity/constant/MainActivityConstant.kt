@@ -1,4 +1,4 @@
-package com.example.todoappdemo.presentation.constant
+package com.example.todoappdemo.presentation.mainActivity.constant
 
 /**
  * Created by Sadaqat Panhwer | https://panhwersadaqat.github.io/

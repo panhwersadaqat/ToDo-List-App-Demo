@@ -1,4 +1,4 @@
-package com.alkesh.scoreboard.common.di
+package com.example.todoappdemo.common.di
 
 import android.content.Context
 import com.example.todoappdemo.common.base.application.BaseApplication

@@ -1,5 +1,7 @@
 package com.example.todoappdemo.common.base.activity
 
+import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
@@ -31,6 +33,11 @@ abstract class AppBaseActivity<in T>() : AppCompatActivity() where T : ViewDataB
     fun startAnotherActivity(intent: Intent) {
         startActivity(intent)
     }
+
+/*    fun startAnotherActivity(context: Context,tergetActivity: Class) {
+        val intent = Intent(context,tergetActivity.getClas)
+        startActivity(intent)
+    }*/
 
     fun showMessage(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
