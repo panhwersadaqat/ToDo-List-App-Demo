@@ -3,7 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
-    id 'dagger.hilt.android.plugin'
 }
 kapt {
     generateStubs = true
@@ -20,7 +19,7 @@ android {
         dataBinding true
     }
     defaultConfig {
-        applicationId "com.example.todoappdemo"
+        applicationId "com.alkesh.scoreboard"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -90,8 +89,11 @@ dependencies {
     implementation "androidx.room:room-ktx:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
 
-    //Hilt
-    implementation("com.google.dagger:hilt-android:$hilt_version")
-    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
+
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.3.1"
 
 }

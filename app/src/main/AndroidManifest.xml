@@ -3,7 +3,6 @@
     package="com.example.todoappdemo">
 
     <application
-        android:name=".common.base.application.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
