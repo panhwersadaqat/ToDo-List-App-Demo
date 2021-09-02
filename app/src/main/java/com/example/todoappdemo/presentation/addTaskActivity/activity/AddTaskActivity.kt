@@ -25,4 +25,8 @@ class AddTaskActivity : AppBaseActivity<ActivityAddTaskBinding>() {
     override fun dataBinding(dataBinder: ActivityAddTaskBinding) {
 
     }
+
+    companion object {
+        const val EXTRA_REPLY = "com.example.android.wordlistsql.REPLY"
+    }
 }
