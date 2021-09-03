@@ -2,6 +2,7 @@ package com.example.todoappdemo.presentation.mainActivity.activity
 
 import android.app.Activity
 import android.content.Intent
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.todoappdemo.R
@@ -21,7 +22,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppBaseActivity<ActivityMainBinding>() {
     private val newTaskActivityRequestCode = 1
     val adapter = TaskListAdapter()
-   // private val viewModel: MainActivityViewModel by viewModels()
    private val viewModel: MainActivityViewModel by viewModels {
        TaskViewModelFactory((application as BaseApplication).repository)
    }
@@ -48,7 +48,7 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>() {
 
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, intentData: Intent?) {
+/*    override fun onActivityResult(requestCode: Int, resultCode: Int, intentData: Intent?) {
         super.onActivityResult(requestCode, resultCode, intentData)
 
         if (requestCode == newTaskActivityRequestCode && resultCode == Activity.RESULT_OK) {
@@ -56,12 +56,12 @@ class MainActivity : AppBaseActivity<ActivityMainBinding>() {
                 val task = TaskItem(reply)
                 viewModel.insert(task)
             }
-        }/* else {
+        } else {
         Toast.makeText(
             applicationContext,
             R.string.empty_not_saved,
             Toast.LENGTH_LONG
         ).show()
-    }*/
     }
+    }*/
 }
