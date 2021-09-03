@@ -10,24 +10,25 @@ import kotlinx.coroutines.launch
  * Created by Sadaqat Panhwer | https://panhwersadaqat.github.io/
  * on 9/2/2021
  */
-class MainActivityViewModel(private val taskRepository: TaskRepository) : BaseViewModel() {
-    val allTask: LiveData<List<TaskItem>> = taskRepository.allWords.asLiveData()
+class MainActivityViewModel(private val taskRepository: TaskRepository) : ViewModel() {
+    val allTask: LiveData<List<TaskItem>> = taskRepository.allTask.asLiveData()
 
     fun insert(taskItem: TaskItem) = viewModelScope.launch {
         taskRepository.insert(taskItem)
     }
+
     init {
 
     }
-
-    class TaskViewModelFactory(private val repository: TaskRepository) : ViewModelProvider.Factory {
+}
+    class TaskViewModelFactory(private val taskRepository: TaskRepository) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(MainActivityViewModel::class.java)) {
                 @Suppress("UNCHECKED_CAST")
-                return MainActivityViewModel(repository) as T
+                return MainActivityViewModel(taskRepository) as T
             }
             throw IllegalArgumentException("Unknown ViewModel class")
         }
-    }
+
 
 }

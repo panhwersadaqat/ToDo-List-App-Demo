@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
  */
 class TaskRepository(private val taskDao: TaskDao) {
 
-    val allWords: Flow<List<TaskItem>> = taskDao.getAlphabetizedWords()
+    val allTask: Flow<List<TaskItem>> = taskDao.getAlphabetizedWords()
 
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
