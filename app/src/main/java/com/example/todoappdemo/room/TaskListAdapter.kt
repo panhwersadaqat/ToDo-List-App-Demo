@@ -22,7 +22,7 @@ class TaskListAdapter : ListAdapter<TaskItem, TaskListAdapter.TaskViewHolder>(WO
     }
 
     class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val wordItemView: TextView = itemView.findViewById(R.id.textView)
+        private val wordItemView: TextView = itemView.findViewById(R.id.task_item_title)
 
         fun bind(text: String?) {
             wordItemView.text = text

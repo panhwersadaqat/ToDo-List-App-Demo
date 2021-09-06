@@ -1,16 +1,10 @@
 package com.example.todoappdemo.presentation.addTaskActivity.activity
 
-import android.app.Activity
-import android.content.Intent
-import android.text.TextUtils
 import androidx.activity.viewModels
-import androidx.lifecycle.observe
 import com.example.todoappdemo.R
 import com.example.todoappdemo.common.base.activity.AppBaseActivity
 import com.example.todoappdemo.common.base.application.BaseApplication
 import com.example.todoappdemo.databinding.ActivityAddTaskBinding
-import com.example.todoappdemo.databinding.ActivityMainBinding
-import com.example.todoappdemo.presentation.addTaskActivity.viewModel.AddTaskViewModel
 import com.example.todoappdemo.presentation.mainActivity.viewModel.MainActivityViewModel
 import com.example.todoappdemo.presentation.mainActivity.viewModel.TaskViewModelFactory
 import com.example.todoappdemo.room.TaskItem
@@ -39,7 +33,7 @@ class AddTaskActivity : AppBaseActivity<ActivityAddTaskBinding>() {
                 setResult(Activity.RESULT_OK, replyIntent)
             }
             finish()*/
-            val taskText = edit_word.text.toString()
+            val taskText = edit_task.text.toString()
             val task = TaskItem(taskText)
             viewModel.insert(task)
             finish()

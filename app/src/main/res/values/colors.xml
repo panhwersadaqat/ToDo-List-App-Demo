@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="layoutBackgroundColor1">#FFFFFF</color>
+    <color name="layoutBackgroundColor2">#F3F3F3</color>
+    <color name="layoutBackgroundColor3">#747474</color>
+
+
+
+
+    <color name="textViewColor1">@android:color/black</color>
+    <color name="textViewColor2">@android:color/white</color>
+    <color name="textViewColor3">#747474</color>
+    <color name="textViewColor4">#2DC7AF</color>
 </resources>
